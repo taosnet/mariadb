@@ -40,4 +40,4 @@ if ! [ -d /var/lib/mysql/mysql ]; then
 else
 	/usr/bin/mysqld_safe "$@" &
 fi
-
+wait ${!}
